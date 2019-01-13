@@ -13,12 +13,14 @@
 .Media-cover {
   transition: .3s;
   box-shadow: 0 0 5px rgba(0,0,0,.3);
-  height: 220px;
+  height: 200px;
   background-color: #0000000d;
 }
 
 .Media-image {
   object-fit: cover;
+  height: 140px;
+  width: 260px;
 }
 
 .Media-title {
