@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './media.css'
 
 class Media extends Component {
@@ -10,20 +11,29 @@ class Media extends Component {
       }
     }
 
+    const { title, author, image } = this.props;
+
     return (
       <div className="Media" style={styles.container}>
         <div className="Media-cover">
           <img
-            className="Media-image "
-            src="./../../../images/covers/bitcoin.jpg"
-            alt=""
+            src = {image}
+            alt = ""
+            className = "Media-image "
           />
-          <h3 className="Media-title">¿Por qué aprender React?...</h3>
-          <p  className="Media-author">Eduardo Denis</p>
+          <h3 className="Media-title">{title}</h3>
+          <p  className="Media-author">{author}</p>
         </div>
       </div>
     )
   }
+}
+
+Media.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string,
+  image: PropTypes.string,
+  type: PropTypes.oneOf(['video', 'audio'])
 }
 
 export default Media;
