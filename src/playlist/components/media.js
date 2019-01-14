@@ -3,7 +3,22 @@ import PropTypes from 'prop-types'
 import './media.css'
 
 class Media extends Component {
+
+  // constructor(props){
+  //   super(props)
+  //   this.handleClick = this.handleClick.bind(this)
+  // }
+  
+  // handleClick(event) {
+  //   console.log(this.props.title)
+  // }
+
+  handleClick = (event) => {
+    console.log(this.props.title)
+  }
+
   render() {
+
     const styles = {
       container: {
         border: '1px solid black',
@@ -14,7 +29,7 @@ class Media extends Component {
     const { title, author, image } = this.props;
 
     return (
-      <div className="Media" style={styles.container}>
+      <div className="Media" style={styles.container} onClick={this.handleClick}>
         <div className="Media-cover">
           <img
             src = {image}
