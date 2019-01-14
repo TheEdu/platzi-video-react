@@ -10,7 +10,7 @@ const mediaTemp = <
                     title  = "¿Qué es responsive Design?"
                     author = "Eduardo Denis"
                     image  = "./../../../images/covers/bitcoin.jpg"
-                    type  = "video"
+                    type  = "audio"
                   />
 ReactDom.render(mediaTemp, app)
 
