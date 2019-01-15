@@ -1,5 +1,6 @@
 Platzi-Video <3
 ==============
+
 home - entry point para webpack
 
   Home - página / (container|smart)
