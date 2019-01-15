@@ -1,8 +1,8 @@
 
-Presentacional and Containers
+Presentational and Containers
 =============================
 
-Presentacional (Cómo se ve)
+Presentational (Cómo se ve)
 ---------------------------
 
   * Puede contener smart components u otros componentes de UI
