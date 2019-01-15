@@ -1,8 +1,16 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import './media.css'
 
-class Media extends Component {
+/*
+  PureComponent: tiene el método shouldComponentUpdate ya asignado (por defecto),
+  si a este componente no se le actualizan las propiedades,
+  no tenemos que validar a mano con shouldComponentUpdate,
+  PureComponent lo hace por nosotros, es decir;
+  si recibe nuevas propiedades pero son las que ya teniamos, no se re-renderiza.
+*/
+
+class Media extends PureComponent {
 
   // constructor(props){
   //   super(props)
