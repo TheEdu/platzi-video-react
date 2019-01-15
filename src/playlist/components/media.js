@@ -21,7 +21,7 @@ class Media extends Component {
 
   // EMCS7 - State maganer
   state = {
-    author: 'Ivan Robles'
+    author: this.props.author
   }
 
   // EMCS7 - Function binding
@@ -29,7 +29,7 @@ class Media extends Component {
     console.log(this.props.title)
 
     this.setState({
-        author: 'Emmanuel Alonso'
+        author: 'handleClick'
     })
   }
 
@@ -42,14 +42,14 @@ class Media extends Component {
       }
     }
 
-    const { title, image } = this.props;
+    const { title, cover } = this.props;
     const { author } = this.state;
 
     return (
       <div className="Media" style={styles.container} onClick={this.handleClick}>
         <div className="Media-cover">
           <img
-            src = {image}
+            src = {cover}
             alt = ""
             className = "Media-image "
           />
@@ -64,7 +64,7 @@ class Media extends Component {
 Media.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string,
-  image: PropTypes.string,
+  cover: PropTypes.string,
   type: PropTypes.oneOf(['video', 'audio'])
 }
 
