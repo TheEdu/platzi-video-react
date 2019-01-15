@@ -8,6 +8,7 @@ import data from './src/api/categories.json'
 // console.log('Hola mundo!')
 //const template = <h1>Hola Mundo!</h1>
 const app = document.getElementById('app')
+
 // const mediaTemp = < 
 //                     Media 
 //                     title  = "¿Qué es responsive Design?"
@@ -21,7 +22,5 @@ const playlistTemp = <
                       Playlist 
                       data = {data}
                     />
-
-
 ReactDom.render(playlistTemp, app)
 
