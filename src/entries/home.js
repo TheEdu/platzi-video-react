@@ -1,13 +1,15 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import Media from './src/playlist/components/media';
-import Playlist from './src/playlist/components/playlist';
-import data from './src/api/categories.json'
-
+import Media from './../playlist/components/media';
+import Playlist from './../playlist/components/playlist';
+import data from './../api/categories.json'
+import Home from './../pages/containers/home';
 
 // console.log('Hola mundo!')
-//const template = <h1>Hola Mundo!</h1>
 const app = document.getElementById('app')
+const homeTemplate = <Home />
+
+ReactDom.render(homeTemplate, app)
 
 // const mediaTemp = < 
 //                     Media 
@@ -18,9 +20,9 @@ const app = document.getElementById('app')
 //                   />
 // ReactDom.render(mediaTemp, app)
 
-const playlistTemp = <
-                      Playlist 
-                      data = {data}
-                    />
-ReactDom.render(playlistTemp, app)
+// const playlistTemp = <
+//                       Playlist 
+//                       data = {data}
+//                     />
+// ReactDom.render(playlistTemp, app)
 
