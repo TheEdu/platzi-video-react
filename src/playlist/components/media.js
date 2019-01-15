@@ -6,15 +6,31 @@ class Media extends Component {
 
   // constructor(props){
   //   super(props)
+  //   // EMCS6 - State maganer
+  //   this.state = {
+  //       author: props.author
+  //   }
+  //   // EMCS6 - Function binding
   //   this.handleClick = this.handleClick.bind(this)
   // }
   
+  // // EMCS6 - Function binding
   // handleClick(event) {
   //   console.log(this.props.title)
   // }
 
+  // EMCS7 - State maganer
+  state = {
+    author: 'Ivan Robles'
+  }
+
+  // EMCS7 - Function binding
   handleClick = (event) => {
     console.log(this.props.title)
+
+    this.setState({
+        author: 'Emmanuel Alonso'
+    })
   }
 
   render() {
@@ -26,7 +42,8 @@ class Media extends Component {
       }
     }
 
-    const { title, author, image } = this.props;
+    const { title, image } = this.props;
+    const { author } = this.state;
 
     return (
       <div className="Media" style={styles.container} onClick={this.handleClick}>
