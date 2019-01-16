@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import Media from './../playlist/components/media';
-import Playlist from './../playlist/components/playlist';
+import Media from './../playlist/components/media'
+import Playlist from './../playlist/components/playlist'
 import data from './../api/categories.json'
-import Home from './../pages/containers/home';
+import Home from './../pages/containers/home'
 
 // console.log('Hola mundo!')
-const app = document.getElementById('app')
-const homeTemplate = <Home data={data} />
+const homeContainer = document.getElementById('home-container')
+const home = <Home data={data} />
 
-ReactDom.render(homeTemplate, app)
+ReactDom.render(home, homeContainer)
 
 // const mediaTemp = < 
 //                     Media 
