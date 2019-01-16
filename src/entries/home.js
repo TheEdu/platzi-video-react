@@ -7,7 +7,7 @@ import Home from './../pages/containers/home';
 
 // console.log('Hola mundo!')
 const app = document.getElementById('app')
-const homeTemplate = <Home />
+const homeTemplate = <Home data={data} />
 
 ReactDom.render(homeTemplate, app)
 
