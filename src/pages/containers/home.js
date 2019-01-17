@@ -14,7 +14,7 @@ class Home extends Component {
                 <ModalContainer>
                     <div> Esto es un Portal </div>
                 </ModalContainer>
-            </ HomeLayout>
+            </HomeLayout>
         )
     }
 }
