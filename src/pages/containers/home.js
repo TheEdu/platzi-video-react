@@ -21,7 +21,10 @@ class Home extends Component {
         return (
             <HomeLayout>
                 <Related />
-                <Categories categories={ categories } />
+                <Categories
+                    categories = { categories }
+                    handleOpenModal = { this.handleModalToggle }
+                />
                 {
                     // If ternario
                     this.state.modalDisplay &&
