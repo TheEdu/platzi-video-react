@@ -16,6 +16,12 @@ class VideoPlayer extends Component {
     })
   }
 
+  componentDidMount() {
+    this.setState({
+      play: !this.props.autoPlay
+    })
+  }
+
   render() {
     return (
       <VideoPlayerLayout>
@@ -28,8 +34,9 @@ class VideoPlayer extends Component {
         />
         <Video
           muted={true}
-          autoPlay={true}
+          autoPlay={this.props.autoPlay}
           src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+          play={this.state.play}
         />
       </VideoPlayerLayout>
     )
