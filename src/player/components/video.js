@@ -22,14 +22,22 @@ class Video extends Component {
   }
 
   render() {
+
+    const {
+      muted,
+      autoPlay,
+      src,
+      handleLoadedMetadata
+    } = this.props
+
     return (
       <div className="Video">
         <video
-          controls
-          muted={this.props.muted}
-          autoPlay={this.props.autoPlay}
-          src={this.props.src}
           ref={this.setRef}
+          muted={muted}
+          autoPlay={autoPlay}
+          src={src}
+          onLoadedMetadata={handleLoadedMetadata}
         />
       </div>
     )
