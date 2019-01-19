@@ -18,7 +18,8 @@ class VideoPlayer extends Component {
     duration: 0,
     currentTime: 0,
     loading: false,
-    lastVolume: 1
+    lastVolume: 1,
+    volumeColor: "white"
   }
 
   togglePlay = (event) => {
@@ -62,15 +63,28 @@ class VideoPlayer extends Component {
     })
   }
 
-  handleVolumeChange = event => {
-    this.video.volume = event.target.value
-    this.state.lastVolume = this.video.volume
+  volumeColor = () => {
+    this.video.volume == 0
+      ? this.setState({ volumeColor: "red" })
+      : this.setState({ volumeColor: "white" })
   }
 
-  handleClick = event => {
+  handleVolumeChange = event => {
+    this.video.volume = event.target.value
+    this.setState({
+      lastVolume: this.video.volume
+    })
+
+    this.volumeColor()
+  }
+
+  handleVolume = event => {
     this.video.volume = this.video.volume > 0 
-                          ? 0 
+                          ? 0
                           : this.state.lastVolume
+
+    this.volumeColor()
+    
   }
 
   handleFullScreen = event => {
@@ -111,7 +125,8 @@ class VideoPlayer extends Component {
           />
           <Volume
             handleVolumeChange={this.handleVolumeChange}
-            handleClick={this.handleClick}
+            handleClick={this.handleVolume}
+            volumeColor={this.state.volumeColor}
           />
           <FullScreen
             handleFullScreen={this.handleFullScreen}

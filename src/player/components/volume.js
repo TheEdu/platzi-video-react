@@ -10,7 +10,7 @@ const Volume = props => {
             >
                 <VolumeIcon
                     size="25"
-                    color="white"
+                    color={props.volumeColor}
                 />
             </div>
             <div className="Volume-range">
