@@ -25,13 +25,9 @@ class Media extends PureComponent {
   }
 
   // EMCS7 - Function binding
-  // handleClick = (event) => {
-  //   console.log(this.props.title)
-
-  //   this.setState({
-  //       author: 'handleClick'
-  //   })
-  // }
+  handleClick = (event) => {
+    this.props.openModal(this.props)
+  }
 
   render() {
 
@@ -48,8 +44,8 @@ class Media extends PureComponent {
     return (
       <div 
         className="Media" style={styles.container}
-        onClick={this.props.handleClick}
-        // onClick={this.handleClick}
+        // onClick={this.props.handleClick}
+        onClick={this.handleClick}
       >
         <div className="Media-cover">
           <img

@@ -93,7 +93,7 @@ class VideoPlayer extends Component {
         setRef={this.setRef}
       >
         <Title 
-          title="Esto es un Video Chido!"
+          title={this.props.title}
         />
         <VideoPlayerControls>
           <PlayPause
@@ -123,7 +123,7 @@ class VideoPlayer extends Component {
         <Video
           muted={false}
           autoPlay={this.props.autoPlay}
-          src="http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+          src={this.props.src}
           play={this.state.play}
           handleLoadedMetadata={this.handleLoadedMetadata}
           handleTimeUpdate={this.handleTimeUpdate}

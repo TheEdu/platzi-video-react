@@ -12,9 +12,10 @@ class Home extends Component {
         modalDisplay: false
     }
 
-    handleModalToggle = (event) => {
+    handleModalToggle = (media) => {
         this.setState({
             modalDisplay: !this.state.modalDisplay,
+            media: media
         })
     }
 
@@ -37,6 +38,8 @@ class Home extends Component {
                             >
                                 <VideoPlayer
                                     autoPlay={true}
+                                    src={this.state.media.src}
+                                    title={this.state.media.title}
                                 />
                             </Modal>
                         </ModalContainer>

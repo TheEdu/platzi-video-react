@@ -15,7 +15,7 @@ class Playlist extends Component {
               <Media 
                 {...item} 
                 key={item.id}
-                handleClick = { this.props.handleOpenModal }
+                openModal = { this.props.handleOpenModal }
               />
             )
           })
